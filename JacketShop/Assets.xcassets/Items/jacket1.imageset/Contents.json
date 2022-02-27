@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "adrian-dascal-1QOsJGbNIgk-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "adrian-dascal-1QOsJGbNIgk-unsplash-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "adrian-dascal-1QOsJGbNIgk-unsplash-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

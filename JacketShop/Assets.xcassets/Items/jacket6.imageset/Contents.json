@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "marcel-strauss-7LUqBD0LW90-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "marcel-strauss-7LUqBD0LW90-unsplash-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "marcel-strauss-7LUqBD0LW90-unsplash-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

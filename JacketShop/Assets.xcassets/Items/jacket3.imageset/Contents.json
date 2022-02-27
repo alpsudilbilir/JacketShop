@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "dmitry-spravko-2cmLR_I_hn0-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "dmitry-spravko-2cmLR_I_hn0-unsplash-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "dmitry-spravko-2cmLR_I_hn0-unsplash-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
