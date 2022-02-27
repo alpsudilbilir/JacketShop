@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemView: View {
+    @EnvironmentObject var viewModel: ViewModel
     var item: Item
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -30,7 +31,7 @@ struct ItemView: View {
                 .cornerRadius(10)
             }
             Button {
-                //Add to cart
+                viewModel.addToCart(item: item)
             } label: {
                 Image(systemName: "plus")
                     .foregroundColor(.black)
@@ -45,5 +46,6 @@ struct ItemView: View {
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
         ItemView(item: itemList[4])
+            .environmentObject(ViewModel())
     }
 }

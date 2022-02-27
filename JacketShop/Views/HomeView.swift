@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var item: Item
     let columns = [GridItem(.adaptive(minimum: 140))]
     var body: some View {
@@ -38,6 +38,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(item: itemList[0])
+        HomeView(item: itemList[0])
     }
 }
