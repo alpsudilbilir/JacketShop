@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var vM = ViewModel()
     var item: Item
-    let columns = [GridItem(.adaptive(minimum: 140))]
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 13) {
-                    ForEach(itemList, id:\.id) { item in
+                LazyVGrid(columns: vM.columns, spacing: 13) {
+                    ForEach(itemList, id: \.id) { item in
                         ItemView(item: item)
+                            .environmentObject(vM)
                     }
-
                 }
                 .padding(6)
             }
@@ -25,9 +25,11 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     NavigationLink {
-                        Text("Items here.")
-                    } label: {
                         CartView()
+                            .environmentObject(vM)
+                    } label: {
+                        CartButtonView(numberOfItems: vM.addedItems.count)
+                            .environmentObject(vM)
                     }
                 }
             }
