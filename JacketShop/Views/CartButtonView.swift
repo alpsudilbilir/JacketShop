@@ -25,7 +25,7 @@ struct CartButtonView: View {
     }
 }
 
-struct CartView_Previews: PreviewProvider {
+struct CartButtonView_Previews: PreviewProvider {
     static var previews: some View {
         CartButtonView(numberOfItems: 1)
             .environmentObject(ViewModel())
