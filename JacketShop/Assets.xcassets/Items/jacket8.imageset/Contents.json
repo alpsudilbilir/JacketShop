@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "michael-afonso-Z_bTArFy6ks-unsplash.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "michael-afonso-Z_bTArFy6ks-unsplash-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "noura-id-JmUVxo97Wak-unsplash.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "noura-id-JmUVxo97Wak-unsplash-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

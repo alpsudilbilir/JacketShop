@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "dmitry-spravko-2cmLR_I_hn0-unsplash.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "dmitry-spravko-2cmLR_I_hn0-unsplash-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

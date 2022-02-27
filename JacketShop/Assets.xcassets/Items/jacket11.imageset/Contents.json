@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "thomas-le-HLf8NdGcI0g-unsplash.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "thomas-le-HLf8NdGcI0g-unsplash-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

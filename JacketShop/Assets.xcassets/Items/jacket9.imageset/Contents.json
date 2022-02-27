@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "ospan-ali-X2UprmSxIHQ-unsplash.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "ospan-ali-X2UprmSxIHQ-unsplash-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

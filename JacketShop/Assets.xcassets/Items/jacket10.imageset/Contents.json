@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "rayan-mill-EvxwJ6ls2vc-unsplash.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "rayan-mill-EvxwJ6ls2vc-unsplash-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
