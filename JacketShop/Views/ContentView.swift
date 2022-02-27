@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var item: Item
-    let columns = [GridItem(.adaptive(minimum: 160))]
+    let columns = [GridItem(.adaptive(minimum: 140))]
     var body: some View {
         NavigationView {
             ScrollView {
@@ -17,10 +17,20 @@ struct ContentView: View {
                     ForEach(itemList, id:\.id) { item in
                         ItemView(item: item)
                     }
+
                 }
-                .padding()
+                .padding(6)
             }
             .navigationTitle(Text("Jacket Shop"))
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    NavigationLink {
+                        Text("Items here.")
+                    } label: {
+                        CartView()
+                    }
+                }
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
