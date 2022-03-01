@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct JacketListView: View {
+    @EnvironmentObject var vM: ViewModel
+    var item: Item
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: vM.columns, spacing: 13) {
+                    ForEach(itemList, id: \.id) { item in
+                        ItemView(item: item)
+                            .environmentObject(vM)
+                    }
+                }
+                .padding(6)
+            }
+            .navigationTitle("Jacket Shop")
+            .navigationViewStyle(StackNavigationViewStyle())
+        }
     }
 }
 
 struct JacketListView_Previews: PreviewProvider {
     static var previews: some View {
-        JacketListView()
+        JacketListView(item: itemList[0])
     }
 }
