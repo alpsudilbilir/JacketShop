@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct CustomTabView: View {
+    @EnvironmentObject var vM: ViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            ForEach(0..<3) { num in
+                Spacer()
+                if num == 2 {
+                    CartButtonView(numberOfItems: vM.cartItems.count)
+                        .foregroundColor( num == vM.selectedTab ? .primary : .gray)
+                        .onTapGesture {
+                            vM.selectedTab = num
+                        }
+                        .padding(.vertical)
+                } else {
+                    Image(systemName: vM.tabBarImageNames[num])
+                        .font(.system(size: 24, weight: .bold))
+                        .foregroundColor( num == vM.selectedTab ? .primary : .gray)
+                        .onTapGesture {
+                            vM.selectedTab = num
+                        }
+                        .padding(.vertical)
+                }
+                Spacer()
+            }
+            .environmentObject(vM)
+        }
+        .background(.ultraThinMaterial)
     }
 }
 
