@@ -16,7 +16,7 @@ struct CartButtonView: View {
                 .resizable()
                 .frame(width: 33, height: 33)
             Text("\(numberOfItems)")
-                .frame(width: 22, height: 20)
+                .frame(width: 20, height: 20)
                 .background(Color.red.opacity(0.6))
                 .foregroundColor(.white)
                 .font(.title2)
@@ -24,7 +24,6 @@ struct CartButtonView: View {
         }
     }
 }
-
 struct CartButtonView_Previews: PreviewProvider {
     static var previews: some View {
         CartButtonView(numberOfItems: 1)

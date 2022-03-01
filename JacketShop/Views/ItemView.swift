@@ -8,38 +8,53 @@
 import SwiftUI
 
 struct ItemView: View {
-    @EnvironmentObject var viewModel: ViewModel
+    @EnvironmentObject var vM: ViewModel
     var item: Item
+
     var body: some View {
-        ZStack(alignment: .topTrailing) {
+        ZStack(alignment: .top) {
             ZStack(alignment: .bottom) {
                 Image(item.image)
                     .resizable()
                     .frame(width: 180, height: 240)
                     .cornerRadius(10)
-                VStack(alignment: .leading) {
-                    Text(item.name)
-                        .foregroundColor(.white)
-                        .bold()
-                    Text("$\(item.price)")
-                        .foregroundColor(.white)
-                        .font(.caption)
-                }
-                .padding()
-                .frame(width: 180, alignment: .leading)
-                .background(.ultraThinMaterial)
-                .cornerRadius(10)
-            }
-            Button {
-                viewModel.addToCart(item: item)
-            } label: {
-                Image(systemName: "plus")
-                    .foregroundColor(.black)
-                    .frame(width: 44, height: 44)
+                    VStack(alignment: .leading) {
+                        Text(item.name)
+                            .foregroundColor(.white)
+                            .bold()
+                        Text("$\(item.price)")
+                            .foregroundColor(.white)
+                            .font(.caption)
+                    }
+                    .padding()
+                    .frame(width: 180, alignment: .leading)
                     .background(.ultraThinMaterial)
-                    .clipShape(Circle())
+                    .cornerRadius(10)
             }
+            HStack {
+                Button {
+                    vM.addToFavorites(item: item)
+                } label: {
+                    Image(systemName: vM.checkFavorites(item: item) ? "heart.fill" : "heart")
+                        .foregroundColor(.primary)
+                        .frame(width: 44, height: 44)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+            }
+                Spacer()
+                Button {
+                    vM.addToCart(item: item)
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(.primary)
+                        .frame(width: 44, height: 44)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+            }
+            }
+            .environmentObject(vM)
         }
+        .frame(width: 180)
     }
 }
 
