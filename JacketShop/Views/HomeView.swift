@@ -11,30 +11,22 @@ struct HomeView: View {
     @StateObject private var vM = ViewModel()
     var item: Item
     var body: some View {
-        NavigationView {
-            ScrollView {
-                LazyVGrid(columns: vM.columns, spacing: 13) {
-                    ForEach(itemList, id: \.id) { item in
-                        ItemView(item: item)
-                            .environmentObject(vM)
-                    }
+        VStack {
+            ZStack {
+                switch vM.selectedTab {
+                case 0:
+                    JacketListView(item: item)
+                case 1:
+                    FavoritesView(item: item)
+                default:
+                    CartView()
                 }
-                .padding(6)
+                
             }
-            .navigationTitle(Text("Jacket Shop"))
-            .toolbar {
-                ToolbarItem(placement: .automatic) {
-                    NavigationLink {
-                        CartView()
-                            .environmentObject(vM)
-                    } label: {
-                        CartButtonView(numberOfItems: vM.addedItems.count)
-                            .environmentObject(vM)
-                    }
-                }
-            }
+            Spacer()
+            CustomTabView()
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .environmentObject(vM)
     }
 }
 
@@ -43,3 +35,5 @@ struct ContentView_Previews: PreviewProvider {
         HomeView(item: itemList[0])
     }
 }
+
+
