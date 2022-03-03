@@ -10,6 +10,7 @@ import SwiftUI
 struct ItemView: View {
     @EnvironmentObject var vM: ViewModel
     var item: Item
+    var bool = false
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -33,11 +34,11 @@ struct ItemView: View {
             }
             HStack {
                 Button {
-                    vM.addToFavorites(item: item)
+                    vM.handleFavorites(item: item)
                 } label: {
                     Image(systemName: vM.checkFavorites(item: item) ? "heart.fill" : "heart")
-                        .foregroundColor(.primary)
                         .frame(width: 44, height: 44)
+                        .foregroundColor(.primary)
                         .background(.ultraThinMaterial)
                         .clipShape(Circle())
             }
