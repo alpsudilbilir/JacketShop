@@ -11,23 +11,28 @@ struct ItemRowView: View {
     @EnvironmentObject var vM: ViewModel
     var item: Item
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             Image(item.image)
                 .resizable()
-                .frame(width: 100, height: 120)
+                .frame(width: 120, height: 140)
                 .cornerRadius(10)
             VStack(alignment: .leading, spacing: 10) {
                 Text(item.name)
                     .bold()
                 Text("$\(item.price)")
             }
+            .padding()
             Spacer()
-            Image(systemName: "trash")
-                .onTapGesture {
-                    vM.removeItem(item: item)
-                }
-                .padding(.horizontal)
+            VStack(alignment: .trailing, spacing: 10) {
+                Spacer()
+                Image(systemName: "trash")
+                    .onTapGesture {
+                        vM.removeItem(item: item)
+                    }
+            }
+            .padding()
         }
+        .frame(width: 400, height: 140)
         .background(.ultraThinMaterial)
         .cornerRadius(10)
     }
