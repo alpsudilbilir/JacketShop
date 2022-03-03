@@ -23,14 +23,17 @@ struct CartView: View {
                     //Pay
                 } label: {
                     Text("Pay")
-                        .frame(width: 100, height: 40)
-                        .background(Color.primary)
+                        .frame(width: 120, height: 40)
+                        .background(.ultraThinMaterial)
                         .cornerRadius(10)
+                        
                 }
+                .disabled(vM.totalPrice == 0 ? true : false)
             }
             .navigationTitle(Text("Cart"))
             .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
