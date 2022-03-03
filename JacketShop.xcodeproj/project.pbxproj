@@ -19,6 +19,7 @@
 		154F035E27CD9B1A005C632B /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F035D27CD9B1A005C632B /* ItemRowView.swift */; };
 		158D618827CEB6FF003AB4AC /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D618727CEB6FF003AB4AC /* CustomTabView.swift */; };
 		158D618A27CEBC15003AB4AC /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D618927CEBC15003AB4AC /* FavoritesView.swift */; };
+		158D618C27D041BF003AB4AC /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158D618B27D041BF003AB4AC /* DetailsView.swift */; };
 		15A10FC727CC1270007ACC40 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A10FC627CC1270007ACC40 /* CartView.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		154F035D27CD9B1A005C632B /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		158D618727CEB6FF003AB4AC /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		158D618927CEBC15003AB4AC /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		158D618B27D041BF003AB4AC /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		15A10FC627CC1270007ACC40 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				154F035B27CD969A005C632B /* JacketListView.swift */,
 				154F035D27CD9B1A005C632B /* ItemRowView.swift */,
 				158D618727CEB6FF003AB4AC /* CustomTabView.swift */,
+				158D618B27D041BF003AB4AC /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				154DCB6527CBAAF500273F08 /* CartButtonView.swift in Sources */,
 				154F035E27CD9B1A005C632B /* ItemRowView.swift in Sources */,
 				15A10FC727CC1270007ACC40 /* CartView.swift in Sources */,
+				158D618C27D041BF003AB4AC /* DetailsView.swift in Sources */,
 				1529B2E327CAF47F00650B87 /* HomeView.swift in Sources */,
 				154DCB6727CBB0C600273F08 /* HomeView-ViewModel.swift in Sources */,
 				1529B2EF27CAF6F900650B87 /* Item.swift in Sources */,
