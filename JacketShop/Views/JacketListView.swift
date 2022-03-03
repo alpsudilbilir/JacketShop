@@ -15,15 +15,19 @@ struct JacketListView: View {
             ScrollView {
                 LazyVGrid(columns: vM.columns, spacing: 13) {
                     ForEach(itemList, id: \.id) { item in
-                        ItemView(item: item)
-                            .environmentObject(vM)
+                        NavigationLink {
+                            DetailsView(item: item)
+                        } label: {
+                            ItemView(item: item)
+                        }
                     }
+                    .environmentObject(vM)
                 }
                 .padding(6)
             }
             .navigationTitle("Jacket Shop")
-            .navigationViewStyle(StackNavigationViewStyle())
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
